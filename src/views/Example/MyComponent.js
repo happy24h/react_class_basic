@@ -5,7 +5,6 @@ class MyComponent extends React.Component {
     state = {
         name: "Việt Anh",
         address: "Hà Nội"
-
     }
 
     handleInput = (e) => {
@@ -14,6 +13,9 @@ class MyComponent extends React.Component {
         })
     }
 
+    handleClick = () => {
+        alert("Click me!")
+    }
    
     render() {
         return (
@@ -34,9 +36,12 @@ class MyComponent extends React.Component {
                         address: {this.state.address}
                     </p>
                 </div>
+
+                <div>
+                    <button onClick={() => {this.handleClick()}}>Click me!</button>
+                </div>
             </div>
         )
-
     }
 }
 
