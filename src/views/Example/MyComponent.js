@@ -18,6 +18,7 @@ class MyComponent extends React.Component {
     }
    
     render() {
+        console.log(">>>> re-render: ", this.state )
         return (
             <div>
                 <input
