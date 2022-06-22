@@ -26,7 +26,7 @@ class MyComponent extends React.Component {
     }
    
     render() {
-        // console.log(">>>> re-render: ", this.state )
+        console.log(">>> check props parents: ", this.props);
         return (
             <>
                 <form >
@@ -48,9 +48,13 @@ class MyComponent extends React.Component {
                         onClick={(event) => this.handleSubmit(event)}
                     />
                 </form> 
-                <ChildComponent name={'child one'}/>
-                <ChildComponent name={'child two'}/>
-                <ChildComponent name={'child three'}/>
+                <ChildComponent 
+                name={'Việt Anh'}
+                address={"Hà Nội"}
+                age={"20"}
+
+                />
+                {/* props: property */}
             </>
         )
     }
