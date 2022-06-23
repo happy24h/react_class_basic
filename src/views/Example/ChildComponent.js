@@ -25,7 +25,7 @@ class ChildComponent extends React.Component {
 
         return (
             <>
-                {showJobs === false ?
+                {showJobs === true ?
                     <div>
                         <button onClick={() => this.handleShowHide()}>Show</button>
                     </div>
@@ -33,7 +33,7 @@ class ChildComponent extends React.Component {
                     <>
                         <div className="jobs-list">
                             {jobs.map((item, index) => (
-                                <div key = {index}>{item.position} - {item.salary}</div>
+                                <div key = {index}>{item.title} - {item.salary}</div>
                             ))}
                         </div> 
                         <div>
