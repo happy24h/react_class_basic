@@ -39,7 +39,7 @@ class ChildComponent extends React.Component {
                         <div>
                             <button onClick={() => this.handleShowHide()}>Show hide</button>
                         </div>
-                    </> 
+                    </>
                 }
             </>
         )
