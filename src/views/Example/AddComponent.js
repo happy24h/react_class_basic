@@ -50,7 +50,8 @@ class AddComponent extends React.Component {
                     type="text" 
                     value={this.state.title}
                     onChange={(e) => this.handleChangeTitle(e)}
-                /><br/>
+                />
+                <br/>
                 <label htmlFor="lname">Salary:</label><br/>
                 <input 
                     type="text"
