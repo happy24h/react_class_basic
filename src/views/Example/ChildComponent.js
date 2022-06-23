@@ -1,39 +1,49 @@
 import React from "react";
 
-// class ChildComponent extends React.Component {
+class ChildComponent extends React.Component {
 
-//     // re-render
-//     render() {
-//         console.log(">>> check props child: ", this.props)
+    state = {
+        showJobs: false
+    }
 
-//         // let jobs = this.props.jobs;
-//         let {jobs} = this.props;
+    handleShowHide = () => {
+        this.setState({
+            showJobs: !this.state.showJobs
+        })
+    }
 
-//         return (
-//             <>
-//                 <div className="jobs-list">
-//                     {jobs.map((item, index) => (
-//                         <div key = {index}>{item.position} - {item.salary}</div>
-//                     ))}
-//                 </div> 
-//             </>
-//         )
-//     }
-// }
+    // re-render
+    render() {
+        // console.log(">>> check props child: ", this.props)
 
-const ChildComponent = (props) => {
+        // let jobs = this.props.jobs;
+        let { jobs } = this.props;
+        let { showJobs } = this.state;
+        let check = showJobs === true ? "showJobs === true" : "showJobs = false";
 
-    let {jobs} = props
-    return (
-        <>
+        console.log(">>> check ", check)
 
-            <div className="jobs-list">
-                {jobs.map((item, index) => (
-                    <div key = {index}>{item.position} - {item.salary}</div>
-                ))}
-            </div> 
-        </>
-    )
+        return (
+            <>
+                {showJobs === false ?
+                    <div>
+                        <button onClick={() => this.handleShowHide()}>Show</button>
+                    </div>
+                :
+                    <>
+                        <div className="jobs-list">
+                            {jobs.map((item, index) => (
+                                <div key = {index}>{item.position} - {item.salary}</div>
+                            ))}
+                        </div> 
+                        <div>
+                            <button onClick={() => this.handleShowHide()}>Show hide</button>
+                        </div>
+                    </> 
+                }
+            </>
+        )
+    }
 }
 
 export default ChildComponent;

@@ -7,9 +7,9 @@ class MyComponent extends React.Component {
         firstName: '',
         lastName: '',
         arrJobs: [
-            {id: "1", salary: "500$", position: "developer"},
-            {id: "2", salary: "400 $", position: "testers"},
-            {id: "3", salary: "1000 $", position: "managers"}
+            {id: "1", salary: "500", position: "developer"},
+            {id: "2", salary: "400", position: "testers"},
+            {id: "3", salary: "1000", position: "managers"}
         ]
     }
     
@@ -54,11 +54,10 @@ class MyComponent extends React.Component {
                     />
                 </form> 
                 <ChildComponent 
-                name={this.state.firstName}
-                address={"Hà Nội"}
-                age={"20"}
-                jobs = {this.state.arrJobs}
-
+                    name={this.state.firstName}
+                    address={"Hà Nội"}
+                    age={"20"}
+                    jobs = {this.state.arrJobs}
                 />
                 {/* props: property */}
             </>
