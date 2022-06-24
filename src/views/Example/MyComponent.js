@@ -37,9 +37,17 @@ class MyComponent extends React.Component {
             arrJobs: currentJobs
         })
     }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log('>> run did update: ', 'prev state: ', prevState, 'current state: ', this.state)
+    }
+
+    componentDidMount() {
+        console.log(">>> run component did mount")
+    }
     
     render() {
-        console.log(">>> check state --------: ", this.state);
+        console.log(">>> call render: ", this.state);
         return (
             <>
             <AddComponent
