@@ -1,5 +1,6 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom';
+import Color from "../HOC/Color"
 
 export const withRouter = WrappedComponent => props => {
     return (<WrappedComponent {...props} navigate={useNavigate()}/>);
@@ -22,5 +23,5 @@ class Home extends React.Component {
     }
 }
 
-export default withRouter(Home);
+export default Color(Home);
 
