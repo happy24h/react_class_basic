@@ -1,10 +1,6 @@
 import React from "react";
-import {useNavigate} from 'react-router-dom';
 import Color from "../HOC/Color"
-
-export const withRouter = WrappedComponent => props => {
-    return (<WrappedComponent {...props} navigate={useNavigate()}/>);
-};
+import logo from "../../assets/images/logo.jpg"
 
 class Home extends React.Component {
 
@@ -17,7 +13,7 @@ class Home extends React.Component {
         return (
             <div>
                 <h3>Hello world from Homepage </h3>
-                <button onClick={() => this.handleNavigateTodo()}>Todo</button>
+                <img src={logo} width="135" height="150" alt="logo"/>
             </div>
         )
     }

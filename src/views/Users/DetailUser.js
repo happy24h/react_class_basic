@@ -26,7 +26,7 @@ class DetailUser extends React.Component {
     }
 
     handleBackButton = () => {
-        this.props.navigate("/user")
+        this.props.navigate("/users")
         
     }
     render() {

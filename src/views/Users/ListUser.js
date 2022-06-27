@@ -27,7 +27,7 @@ class ListUser extends React.Component {
     }
 
     handleViewDetailUser = (user) => {
-        this.props.navigate(`${user.id}`);
+        this.props.navigate(`/user/${user.id}`);
 
     }
 

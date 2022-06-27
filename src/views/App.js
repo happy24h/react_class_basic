@@ -11,7 +11,7 @@ import Nav from './Nav/Nav';
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       <div className="App">
         
         <header className="App-header">
@@ -23,7 +23,7 @@ function App() {
             <Route path="/" exact element={<Home />} />
             <Route path="/todo" element={<ListTodo />} />
             <Route path="/about" element={<MyComponent />} />
-            <Route path="/user" exact element={<ListUser />} />
+            <Route path="/users" exact element={<ListUser />} />
             <Route path="/user/:id" exact element={<DetailUser />} />
           </Routes>
         </header>
@@ -40,7 +40,7 @@ function App() {
           pauseOnHover
         />
       </div>
-      </BrowserRouter>
+    </BrowserRouter>
 
   );
 }
