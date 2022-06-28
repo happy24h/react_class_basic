@@ -2,12 +2,9 @@ import React from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from "axios";
 
-
-
 function withParams(Component) {
     return props => <Component {...props}  navigate={useNavigate()} params={useParams()} />;
   }
-  
 
 class DetailUser extends React.Component {
     state = {

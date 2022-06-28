@@ -12,15 +12,16 @@ const rootReducer = (state = initState, action) => {
             console.log('>>> check state action', action)
             let users = state.users;
             users = users.filter(item => item.id !== action.payload.id)
+            // state = {...state, users}
+            console.log("-----",{...state})
             return {
-                ...state, users
+                users 
             };
             case"CREATE_USER":
             let id = Math.floor(Math.random() * 10000)
             let user = {id: id, name: `random ${id}`}
             return {
-               
-                ...state, users: [...state.users, user]
+                users: [...state.users, user]
             }
             default:
                 return state

@@ -1,14 +1,17 @@
 import axios from "axios";
 import React from "react";
 import "./ListUser.scss";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
-export const withRouter = WrappedComponent => props => {
-    return (<WrappedComponent {...props} navigate={useNavigate()}/>);
-};
+// export const withRouter = WrappedComponent => props => {
+//     return (<WrappedComponent {...props} navigate={useNavigate()}/>);
+// };
+
+function withRouter(Component) {
+    return props => <Component {...props}  navigate={useNavigate()}  />;
+  }
 
 class ListUser extends React.Component {
-
     state= {
         listUsers: []
     }
@@ -28,7 +31,6 @@ class ListUser extends React.Component {
 
     handleViewDetailUser = (user) => {
         this.props.navigate(`/user/${user.id}`);
-
     }
 
     render() {
@@ -52,8 +54,6 @@ class ListUser extends React.Component {
                             )
                         })
                     }
-                   
-
                 </div>
             </div>
         )
